@@ -55,12 +55,10 @@ public class RefactorEnemyFinished : MonoBehaviour
     private void Update()
     {
         // changes the enemy's behavior: pacing in circles or chasing the player
-        if (enemyStats.idle == true)
+        if (enemyStats.idle)
         {
             patrolBehavior.Move(enemyStats.walkSpeed);
-        }
-        else if (enemyStats.idle == false)
-        {
+        } else {
             Chase();
             CheckExplode();
         }
